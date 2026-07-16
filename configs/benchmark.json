@@ -1,0 +1,31 @@
+{
+    "dataset": "common100",
+
+    "languages": [
+        "english",
+        "hindi",
+        "punjabi",
+        "french"
+    ],
+
+    "tokenizers": [
+        "gpt2",
+        "cl100k_base",
+        "o200k_base",
+        "o200k_harmony",
+        {
+            "type": "huggingface",
+            "name": "sarvam",
+            "model": "sarvamai/sarvam-m",
+            "trust_remote_code": true,
+            "fix_mistral_regex": true
+        }
+    ],
+
+    "output": {
+        "directory": "output",
+        "console": true,
+        "txt": true,
+        "csv": false
+    }
+}

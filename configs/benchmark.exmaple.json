@@ -1,0 +1,68 @@
+{
+    "_info": "Tokenizer Benchmark Configuration",
+
+    "_available_datasets": [
+        "common100",
+        "common1000",
+        "programming"
+    ],
+
+    "_available_languages": [
+        "english",
+        "hindi",
+        "punjabi",
+        "gujarati",
+        "marathi",
+        "tamil",
+        "telugu",
+        "kannada",
+        "bengali",
+        "malayalam"
+    ],
+
+    "_available_tiktoken_encodings": [
+        "gpt2",
+        "r50k_base",
+        "p50k_base",
+        "p50k_edit",
+        "cl100k_base",
+        "o200k_base",
+        "o200k_harmony"
+    ],
+
+    "_huggingface_example": {
+        "type": "huggingface",
+        "name": "sarvam",
+        "model": "sarvamai/sarvam-m",
+        "trust_remote_code": true,
+        "fix_mistral_regex": true
+    },
+
+    "dataset": "common1000",
+
+    "languages": [
+        "english",
+        "hindi",
+        "punjabi"
+    ],
+
+    "tokenizers": [
+        "gpt2",
+        "o200k_base",
+
+        {
+            "type": "huggingface",
+            "name": "sarvam",
+            "model": "sarvamai/sarvam-m",
+            "trust_remote_code": true,
+            "fix_mistral_regex": true
+        }
+    ],
+
+    "output": {
+        "directory": "output",
+        "console": true,
+        "txt": true,
+        "csv": true
+    }
+}
