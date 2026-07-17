@@ -103,6 +103,7 @@ source .venv/bin/activate
 
 Install the dependencies.
 
+# Note, I haven't added this yet. 
 ```bash
 pip install -r requirements.txt
 ```
@@ -443,3 +444,6 @@ Before submitting a dataset, ensure that:
 # License
 
 MIT License.
+
+
+If you find it useful or have suggestion, please comment, would like to get the feedback.
