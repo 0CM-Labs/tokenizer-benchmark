@@ -1,0 +1,7 @@
+Tokenizer      english  hindi  punjabi  french  
+------------------------------------------------
+gpt2           113      1112   1128     245     
+cl100k_base    112      696    1128     185     
+o200k_base     107      195    399      139     
+o200k_harmony  107      195    399      139     
+sarvam         114      251    470      149     
