@@ -8,6 +8,7 @@ Entry point for the tokenizer benchmark application.
 
 import argparse
 from benchmark.runner import BenchmarkRunner
+from benchmark.logger import logger
 
 
 def parse_arguments():
@@ -26,7 +27,7 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-
+    logger.info(f"loading the program")
     runner = BenchmarkRunner(config_path=args.config)
     runner.run()
 

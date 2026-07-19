@@ -4,6 +4,7 @@ report.py
 Generates benchmark reports.
 """
 
+from pathlib import Path
 import csv
 from pathlib import Path
 
@@ -40,7 +41,8 @@ class ReportGenerator:
         if not self._config.output["txt"]:
             return
 
-        output_file = self._output_dir / "benchmark.txt"
+        dataset_name = self._config.dataset
+        output_file = Path(self._output_dir) / f"{dataset_name}_benchmark.txt"
 
         with output_file.open("w", encoding="utf-8") as f:
             self._write_table(results, f)
@@ -66,7 +68,8 @@ class ReportGenerator:
         if not self._config.output["csv"]:
             return
 
-        output_file = self._output_dir / "benchmark.csv"
+        dataset_name = self._config.dataset
+        output_file = Path(self._output_dir) / f"{dataset_name}_benchmark.csv"
 
         if not results:
             return
